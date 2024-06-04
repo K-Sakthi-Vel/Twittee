@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Twittee</title>
+        <link rel="stylesheet" href="../assets/css/entry.css">
+    </head>
+    <body>
+        <div class="register">
+            <p class="app-name">Twitee</p>
+            <form action="/authenticate/registerUser" method="POST">
+                <input type="text" class="input_box" name="name" placeholder="Enter name">
+                <input type="email" class="input_box" name="email" placeholder="Enter mail">
+                <input type="password" class="input_box" name="password" placeholder="Enter password">
+                <input type="password" class="input_box" name="confirm-password" placeholder="Confirm password">
+                <button type="submit" class="register_button">Register</button>
+                <br>
+                <a href="/authenticate/sign-in-page">Already in Twitee family?</a>
+            </form>
+        </div>
+
+    </body>
+
+</html>

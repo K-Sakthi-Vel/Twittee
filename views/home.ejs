@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Twittee</title>
+        <link rel="stylesheet" href="../assets/css/home.css">
+    </head>
+    <body>
+        <div class="signin">
+            <div class="navbar">
+                <p class="app-name">Twitee</p>
+            </div>
+            <div class="main">
+                <div class="user-panel">
+                    <img class="profile-pic" src="../assets/images/user.png"/>
+                    <p class="username"><%= name%></p>
+                </div>
+                <div class="tweets-panel">
+                    <div class="create-tweet">
+                        <form action="/tweets/add_tweet" method="POST">
+                            <img class="tweet-img" src="../assets/images/tweet.png" alt="">
+                            <input type="text" name="tweet" placeholder="What's in your mind!!!">
+                            <input type="hidden" value="<%=name%>" name="username">
+                            <button type="submit">Tweet</button>
+                        </form>
+                    </div>
+                    <div class="show-tweets">
+                        <% for(let i of tweets){%>
+                            <div class="tweet">
+                                <div class="tweeted-user">
+                                    <img src="../assets/images/user.png" alt="user">
+                                    <p><%= i.username %></p>
+                                </div>
+                                <div class="content">
+                                    <img src="../assets/images/tweet.png" alt="user">
+                                    <p><%= i.tweet %></p>
+                                </div>
+                            </div>
+                        <%}%>
+                    </div>
+                    <div class="pagination">
+                        &nbsp;
+                        <a href="/tweets/previous?val=<%=value%>&username=<%=name%>"><button>Previous</button></a>
+                        <a href="/tweets/next?val=<%=value%>&username=<%=name%>"><button>Next</button></a>
+                        &nbsp;
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+
+    </body>
+
+</html>

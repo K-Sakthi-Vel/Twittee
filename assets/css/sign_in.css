@@ -1,0 +1,47 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+}
+.app-name{
+    text-align:center;
+    font-size: 3rem;
+    color: black;
+}
+.signin{
+    height: 500px;
+    width: 400px;
+    margin: auto;
+}
+.signin form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.input_box{
+    all: unset;
+    border: 1px solid gray;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: white;
+    height: 40px;
+    width: 90%;   
+}
+.signin_button{
+    height: 40px;
+    width: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: orangered;
+    border: none;
+    transition: all .1s ease-in-out;
+}
+.signin_button:hover{
+    cursor: pointer;
+    scale: .97;
+    
+    color: white;
+    
+}
